@@ -1,0 +1,430 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #00c8ff; /* Updated color */
+    font-weight: 800;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: #00c8ff; /* Updated color */
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: #00c8ff; /* Updated color */
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+    color: white;
+    border-bottom: 3px solid #00c8ff; /* Updated color */
+}
+
+@media (max-width: 995px) {
+    .navbar-collapse {
+        background-color: #161616;
+        border: 5px solid #00c8ff; /* Updated color */
+        border-radius: 2rem;
+        padding: 1.5rem;
+        position: absolute;
+        top: 60px;
+    }
+
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+    }
+
+    .navbar-toggler i {
+        color: #00c8ff; /* Updated color */
+        font-size: 25px;
+    }
+
+    .nav-link {
+        display: block;
+        font-size: 2.2rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        color: #00c8ff; /* Updated color */
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #00c8ff; /* Updated color */
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #00c8ff; /* Updated color */
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 32vw;
+    border-radius: 80%;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.862); /* Light blue border effect initially */
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the border */
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 20px rgba(0, 200, 255, 1); /* Brighter, more pronounced light blue border on hover */
+    transform: scale(1.05); /* Optional: slightly scale the image to make it pop */
+}
+
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #00c8ff; /* Updated color */
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #00c8ff; /* Updated color */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #00c8ff; /* Updated color */
+    box-shadow: 0 0 25px #00c8ff; /* Updated color */
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #00c8ff; /* Updated color */
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #00c8ff; /* Updated color */
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #00c8ff; /* Updated color */
+    color: black;
+    box-shadow: 0 0 25px #00c8ff; /* Updated color */
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Full-Stack Developer";
+    color: #00c8ff; /* Updated color */
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #00c8ff; /* Updated color */
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Full-Stack Developer";
+    }
+    21%, 40% {
+        content: "Software engineer";
+    }
+    41%, 60% {
+        content: "Web Designer";
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+.album {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.album img {
+    width: 15vw;
+    border-radius: 10%;
+    box-shadow: 0 0 25px solid #00c8ff; /* Updated color */
+    transition: 0.3s ease;
+}
+
+.album img:hover {
+    transform: scale(1.1);
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #1f7fac;
+    border-radius: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: srem;
+    background-color: #161616;
+    color: rgb(255, 255, 255);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 1.4rem;
+}
+
+.text-muted {
+    color: #00c8ff; /* Updated color */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 55px rgba(255, 255, 255, 0.2);
+}
+
+.services-description {
+    margin-top: 3rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.services-text {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-text {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-text {
+        font-size: 1.5rem;
+    }
+}
+
+.skills-title {
+    color:  #387bb3;
+    font-size: 4rem; 
+    font-style: normal; 
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 25%, rgba(45, 184, 227, 0.908) 50%, rgba(228, 46, 201, 0.3) 75%);
+    background-size: 200% 100%; 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    animation: shine 1.5s ease-in-out infinite; 
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% 0; 
+    }
+    100% {
+        background-position: 0% 0; 
+    }
+}
+
+.skills-title:hover {
+    text-shadow: 2px 2px 5px rgba(153, 211, 244, 0.584);
+    transform: scale(1.05); 
+    transition: transform 0.3s ease, text-shadow 0.3s ease; 
+}
+
+.skill-card {
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    background-color: #4290b9df; 
+    border-radius: 4rem;
+}
+
+.skill-card:hover {
+    transform: scale(1.05); 
+    background-color: rgba(0, 0, 0, 0.348); 
+    box-shadow: 0 6px 55px rgba(20, 33, 153, 0.612);
+}
+
+.skill-card h5, .skill-card p {
+    transition: color 0.3s ease; 
+}
+
+.skill-card:hover h5, .skill-card:hover p {
+    color: rgba(204, 242, 250, 0.816); 
+}
+
+.row {
+    margin-left: 5rem;
+}
+
+.skills-conclusion {
+    color: rgb(255, 255, 255); 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.conclusion-text {
+    font-size: 2.2rem; 
+    line-height: 1.5; 
+    padding: 1.5rem; 
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; 
+}
+
+
+
+.transparent-card {
+    background-color: transparent;
+    border: none;
+}
+
+
